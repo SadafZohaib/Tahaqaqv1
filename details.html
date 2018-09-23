@@ -1,0 +1,60 @@
+<!--
+  Generated template for the DetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Product Details</ion-title>
+    <!-- <ion-buttons side="left" class="has-header">
+      <button class="button button-icon icon ion-ios-arrow-back"></button>
+   </ion-buttons> -->
+  </ion-navbar>
+
+
+
+</ion-header>
+
+
+<ion-content padding="true" class="has-header">
+   <div class="list card">
+     <ion-item *ngFor="let item of items">
+       <ion-item class="item-thumbnail-left positive">
+         <ion-thumbnail item-start>
+           <img src="{{item.product_image_url}}">
+         </ion-thumbnail>
+         <h1 style="text-align: left; color: #639ef9">{{item.product_name}}</h1>
+       </ion-item>
+       <form class="list">
+         <div>
+           <div class="button-bar"></div>
+         </div>
+         <table style="width:100%; font: montserrat">
+           <tbody>
+             <div class="spacer" style="width: 300px; height: 5px;"></div>
+             <tr>
+               <th style="text-align: left; color: #639ef9">M.R.P.</th>
+               <td style="text-align: left;">{{item.product_price}}</td>
+             </tr>
+             <div class="spacer" style="width: 300px; height: 5px;"></div>
+             <tr>
+               <th style="text-align: left; color: #639ef9">Manufacturer Name</th>
+               <td style="text-align: left;">{{item.product_manufacturer}}</td>
+             </tr>
+             <div class="spacer" style="width: 300px; height: 5px;"></div>
+             <tr>
+               <th style="text-align: left; color: #639ef9">Description</th>
+             </tr>
+             <tr>
+             <td>{{item.product_description}}</td>
+           </tr>
+           </tbody>
+         </table>
+         <div class="spacer" style="width: 300px; height: 6px;"></div>
+         <img src="assets/imgs/Rate It.png">
+       </form>
+     </ion-item>
+   </div>
+ </ion-content>
